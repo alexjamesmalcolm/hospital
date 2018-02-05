@@ -3,8 +3,10 @@ package hospital;
 public class Nurse extends Employee {
 
 	private int employeeNumber;
+	private String name;
 
 	public Nurse(String name, int employeeNumber) {
+		this.name = name;
 		this.employeeNumber = employeeNumber;
 	}
 
@@ -22,7 +24,7 @@ public class Nurse extends Employee {
 
 	@Override
 	public String getName() {
-		return "John";
+		return name;
 	}
 
 }
