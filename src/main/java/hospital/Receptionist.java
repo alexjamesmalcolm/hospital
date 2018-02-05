@@ -16,7 +16,6 @@ public class Receptionist extends Employee {
 
 	@Override
 	public int getSalary() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 45000;
 	}
 }

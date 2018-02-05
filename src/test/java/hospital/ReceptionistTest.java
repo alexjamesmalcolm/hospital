@@ -37,4 +37,11 @@ public class ReceptionistTest {
 		int num = underTest.getEmployeeNumber();
 		assertThat(num, is(111));
 	}
+	
+	@Test
+	public void shouldHaveSalary() {
+		Employee underTest = new Receptionist("",11,true);
+		int salary = underTest.getSalary();
+		assertThat(salary, is(45000));
+	}
 }
