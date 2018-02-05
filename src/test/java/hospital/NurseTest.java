@@ -6,14 +6,21 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 
 public class NurseTest {
-	
+
+	boolean wasBled = false;
+	public class BleedableDouble implements Bleedable {
+
+		@Override
+		public void removeBlood(int amount) {
+			wasBled = true;
+		}
+	}
+
 	@Test
 	public void shouldDrawBlood() {
 		Nurse underTest = new Nurse();
-		Patient victim = new Patient();
-		int bloodBefore = victim.getBloods();
-		underTest.drawBlood(victim);
-		int bloodAfter = victim.getBloods();
-		assertThat(bloodBefore - bloodAfter, is(1));
+		Bleedable patient = new BleedableDouble();
+		underTest.drawBlood(patient);
+		assertThat(wasBled, is(true));
 	}
 }
