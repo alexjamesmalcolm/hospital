@@ -46,7 +46,7 @@ public class NurseTest {
 		String name = underTest.getName();
 		assertThat(name, is("John"));
 	}
-	
+
 	@Test
 	public void shouldHaveNamePhil() {
 		Employee underTest = new Nurse("Phil", 0);

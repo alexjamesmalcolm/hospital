@@ -58,28 +58,28 @@ public class DoctorTest {
 		int number = underTest.getEmployeeNumber();
 		assertThat(number, is(222));
 	}
-	
+
 	@Test
 	public void shouldHaveSpecialtyArea() {
 		Doctor underTest = new Doctor("", 0, "Brain");
 		String specialty = underTest.getSpecialty();
 		assertThat(specialty, is("Brain"));
 	}
-	
+
 	@Test
 	public void shouldHaveSpecialtyAreaHeart() {
 		Doctor underTest = new Doctor("", 0, "Heart");
 		String specialty = underTest.getSpecialty();
 		assertThat(specialty, is("Heart"));
 	}
-	
+
 	@Test
 	public void shouldHaveNamePhil() {
 		Employee underTest = new Doctor("Phil", 0, "");
 		String name = underTest.getName();
 		assertThat(name, is("Phil"));
 	}
-	
+
 	@Test
 	public void shouldHaveNameJohn() {
 		Employee underTest = new Doctor("John", 0, "");
