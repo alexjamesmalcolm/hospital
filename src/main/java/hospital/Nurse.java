@@ -2,7 +2,10 @@ package hospital;
 
 public class Nurse extends Employee {
 
+	private int employeeNumber;
+
 	public Nurse(int employeeNumber) {
+		this.employeeNumber = employeeNumber;
 	}
 
 	public void drawBlood(Bleedable patient) {
@@ -10,7 +13,7 @@ public class Nurse extends Employee {
 	}
 
 	public int getEmployeeNumber() {
-		return 111;
+		return employeeNumber;
 	}
 
 	public int getSalary() {
