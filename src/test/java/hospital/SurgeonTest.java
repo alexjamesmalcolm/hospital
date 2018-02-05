@@ -34,8 +34,15 @@ public class SurgeonTest {
 	
 	@Test
 	public void shouldBeOperating() {
-		Surgeon underTest = new Surgeon(null, 0, null, false);
+		Surgeon underTest = new Surgeon(null, 0, null, true);
 		boolean status = underTest.isOperating();
 		assertThat(status, is(true));
+	}
+	
+	@Test
+	public void shouldNotBeOperating() {
+		Surgeon underTest = new Surgeon(null, 0, null, false);
+		boolean status = underTest.isOperating();
+		assertThat(status, is(false));
 	}
 }

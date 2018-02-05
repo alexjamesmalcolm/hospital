@@ -15,6 +15,6 @@ public class Surgeon extends Doctor {
 	}
 
 	public boolean isOperating() {
-		return true;
+		return isOperating;
 	}
 }
