@@ -11,5 +11,9 @@ public class Janitor extends Employee {
 	public int getSalary() {
 		return 0;
 	}
+	
+	public boolean isSweeping() {
+		return true;
+	}
 
 }

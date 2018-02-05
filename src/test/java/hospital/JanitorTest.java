@@ -12,15 +12,22 @@ public class JanitorTest {
 		String name = "Phil";
 		int employeeNumber = 111;
 		boolean isSweeping = true;
-		Employee underTest = new Janitor(name, employeeNumber, isSweeping);
+		Janitor underTest = new Janitor(name, employeeNumber, isSweeping);
 		String returnedName = underTest.getName();
 		assertThat(returnedName, is(name));
 	}
 
 	@Test
 	public void shouldHaveEmployeeNumber() {
-		Employee underTest = new Janitor("", 111, false);
+		Janitor underTest = new Janitor("", 111, false);
 		int employeeNumber = underTest.getEmployeeNumber();
 		assertThat(employeeNumber, is(111));
+	}
+	
+	@Test
+	public void shouldHaveIsSweepingTrue() {
+		Janitor underTest = new Janitor("", 1, true);
+		boolean isSweeping = underTest.isSweeping();
+		assertThat(isSweeping, is(true));
 	}
 }
