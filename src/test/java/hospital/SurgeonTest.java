@@ -31,4 +31,11 @@ public class SurgeonTest {
 		int salary = underTest.getSalary();
 		assertThat(salary, is(120000));
 	}
+	
+	@Test
+	public void shouldBeOperating() {
+		Surgeon underTest = new Surgeon(null, 0, null, false);
+		boolean status = underTest.isOperating();
+		assertThat(status, is(true));
+	}
 }

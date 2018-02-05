@@ -13,4 +13,8 @@ public class Surgeon extends Doctor {
 	public int getSalary() {
 		return 120000;
 	}
+
+	public boolean isOperating() {
+		return true;
+	}
 }
