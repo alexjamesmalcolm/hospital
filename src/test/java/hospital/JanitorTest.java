@@ -23,11 +23,18 @@ public class JanitorTest {
 		int employeeNumber = underTest.getEmployeeNumber();
 		assertThat(employeeNumber, is(111));
 	}
-	
+
 	@Test
 	public void shouldHaveIsSweepingTrue() {
 		Janitor underTest = new Janitor("", 1, true);
 		boolean isSweeping = underTest.isSweeping();
 		assertThat(isSweeping, is(true));
+	}
+
+	@Test
+	public void shouldHaveIsSweepingFalse() {
+		Janitor underTest = new Janitor("", 1, false);
+		boolean isSweeping = underTest.isSweeping();
+		assertThat(isSweeping, is(false));
 	}
 }
