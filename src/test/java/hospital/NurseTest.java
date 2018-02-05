@@ -5,17 +5,15 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-public class DoctorTest {
-
+public class NurseTest {
+	
 	@Test
 	public void shouldDrawBlood() {
-		Doctor underTest = new Doctor();
+		Nurse underTest = new Nurse();
 		Patient victim = new Patient();
-
-		int beforeBloodLevel = victim.getBloods();
+		int bloodBefore = victim.getBloods();
 		underTest.drawBlood(victim);
-		int afterBloodLevel = victim.getBloods();
-
-		assertThat(beforeBloodLevel - afterBloodLevel, is(1));
+		int bloodAfter = victim.getBloods();
+		assertThat(bloodBefore - bloodAfter, is(1));
 	}
 }
