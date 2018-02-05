@@ -32,4 +32,19 @@ public class NurseTest {
 		int returnedEmployeeNumber = underTest.getEmployeeNumber();
 		assertThat(returnedEmployeeNumber, is(employeeNumber));
 	}
+
+	@Test
+	public void shouldHaveSalary() {
+		Nurse underTest = new Nurse(0);
+		int salary = underTest.getSalary();
+		assertThat(salary, is(50000));
+	}
+
+	@Test
+	public void shouldHaveName() {
+	}
+
+	@Test
+	public void shouldHaveSpecialtyArea() {
+	}
 }

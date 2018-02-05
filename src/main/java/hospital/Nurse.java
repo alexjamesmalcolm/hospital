@@ -1,6 +1,6 @@
 package hospital;
 
-public class Nurse {
+public class Nurse extends Employee {
 
 	public Nurse(int employeeNumber) {
 	}
@@ -11,6 +11,10 @@ public class Nurse {
 
 	public int getEmployeeNumber() {
 		return 111;
+	}
+
+	public int getSalary() {
+		return 50000;
 	}
 
 }
