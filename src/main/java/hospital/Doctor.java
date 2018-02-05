@@ -22,4 +22,10 @@ public class Doctor extends Employee {
 		return employeeNumber;
 	}
 
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

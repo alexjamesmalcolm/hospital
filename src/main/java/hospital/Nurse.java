@@ -4,7 +4,7 @@ public class Nurse extends Employee {
 
 	private int employeeNumber;
 
-	public Nurse(int employeeNumber) {
+	public Nurse(String name, int employeeNumber) {
 		this.employeeNumber = employeeNumber;
 	}
 
@@ -18,6 +18,11 @@ public class Nurse extends Employee {
 
 	public int getSalary() {
 		return 50000;
+	}
+
+	@Override
+	public String getName() {
+		return "John";
 	}
 
 }
