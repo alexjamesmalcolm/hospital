@@ -65,4 +65,11 @@ public class DoctorTest {
 		String specialty = underTest.getSpecialty();
 		assertThat(specialty, is("Brain"));
 	}
+	
+	@Test
+	public void shouldHaveSpecialtyAreaHeart() {
+		Doctor underTest = new Doctor(0, "Heart");
+		String specialty = underTest.getSpecialty();
+		assertThat(specialty, is("Heart"));
+	}
 }

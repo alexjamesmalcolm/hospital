@@ -3,9 +3,11 @@ package hospital;
 public class Doctor extends Employee {
 
 	private int employeeNumber;
+	private String specialty;
 
 	public Doctor(int employeeNumber, String specialty) {
 		this.employeeNumber = employeeNumber;
+		this.specialty = specialty;
 	}
 
 	public void drawBlood(Bleedable bleedable) {
@@ -29,7 +31,7 @@ public class Doctor extends Employee {
 	}
 
 	public String getSpecialty() {
-		return "Brain";
+		return specialty;
 	}
 
 }
