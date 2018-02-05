@@ -1,8 +1,10 @@
 package hospital;
 
+import static hospital.Patient.DEFAULT_BLOOD;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
+import org.hamcrest.Matchers;
 import org.junit.Test;
 
 public class SurgeonTest {
@@ -31,18 +33,27 @@ public class SurgeonTest {
 		int salary = underTest.getSalary();
 		assertThat(salary, is(120000));
 	}
-	
+
 	@Test
 	public void shouldBeOperating() {
 		Surgeon underTest = new Surgeon(null, 0, null, true);
 		boolean status = underTest.isOperating();
 		assertThat(status, is(true));
 	}
-	
+
 	@Test
 	public void shouldNotBeOperating() {
 		Surgeon underTest = new Surgeon(null, 0, null, false);
 		boolean status = underTest.isOperating();
 		assertThat(status, is(false));
+	}
+	
+	@Test
+	public void shouldDrawBlood() {
+		Surgeon underTest = new Surgeon(null, 0, null, false);
+		Patient patient = new Patient();
+		underTest.drawBlood(patient);
+		int blood = patient.getBloods();
+		assertThat(blood, Matchers.lessThan(DEFAULT_BLOOD));
 	}
 }

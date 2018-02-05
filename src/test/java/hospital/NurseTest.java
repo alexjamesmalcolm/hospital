@@ -19,7 +19,7 @@ public class NurseTest {
 
 	@Test
 	public void shouldDrawBlood() {
-		Nurse underTest = new Nurse(null, 0);
+		MedicalDuties underTest = new Nurse(null, 0);
 		Bleedable patient = new BleedableDouble();
 		underTest.drawBlood(patient);
 		assertThat(wasBled, is(true));

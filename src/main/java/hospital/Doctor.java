@@ -1,6 +1,6 @@
 package hospital;
 
-public class Doctor extends Employee {
+public class Doctor extends Employee implements MedicalDuties {
 
 	private String specialty;
 
@@ -10,16 +10,17 @@ public class Doctor extends Employee {
 		this.specialty = specialty;
 	}
 
-	public void drawBlood(Bleedable bleedable) {
-		bleedable.removeBlood(3);
-	}
-
 	public int getSalary() {
 		return 90000;
 	}
 
 	public String getSpecialty() {
 		return specialty;
+	}
+
+	@Override
+	public void drawBlood(Bleedable patient) {
+		patient.removeBlood(3);
 	}
 
 }
