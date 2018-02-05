@@ -23,4 +23,11 @@ public class ReceptionistTest {
 		boolean status = underTest.isOnPhone();
 		assertThat(status, is(false));
 	}
+	
+	@Test
+	public void shouldHaveNameJohn() {
+		Employee underTest = new Receptionist("John",1,true);
+		String name = underTest.getName();
+		assertThat(name, is("John"));
+	}
 }
