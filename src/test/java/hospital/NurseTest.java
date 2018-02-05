@@ -8,6 +8,7 @@ import org.junit.Test;
 public class NurseTest {
 
 	boolean wasBled = false;
+
 	public class BleedableDouble implements Bleedable {
 
 		@Override
@@ -18,9 +19,17 @@ public class NurseTest {
 
 	@Test
 	public void shouldDrawBlood() {
-		Nurse underTest = new Nurse();
+		Nurse underTest = new Nurse(0);
 		Bleedable patient = new BleedableDouble();
 		underTest.drawBlood(patient);
 		assertThat(wasBled, is(true));
+	}
+
+	@Test
+	public void shouldHaveEmployeeNumber() {
+		int employeeNumber = 111;
+		Nurse underTest = new Nurse(employeeNumber);
+		int returnedEmployeeNumber = underTest.getEmployeeNumber();
+		assertThat(returnedEmployeeNumber, is(employeeNumber));
 	}
 }
