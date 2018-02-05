@@ -55,10 +55,6 @@ public class NurseTest {
 	}
 
 	@Test
-	public void shouldHaveSpecialtyArea() {
-	}
-
-	@Test
 	public void shouldHaveNurseEmployeeNumberBe333() {
 		Employee underTest = new Nurse(null, 333);
 		int number = underTest.getEmployeeNumber();

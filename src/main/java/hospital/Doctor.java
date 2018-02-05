@@ -4,7 +4,7 @@ public class Doctor extends Employee {
 
 	private int employeeNumber;
 
-	public Doctor(int employeeNumber) {
+	public Doctor(int employeeNumber, String specialty) {
 		this.employeeNumber = employeeNumber;
 	}
 
@@ -26,6 +26,10 @@ public class Doctor extends Employee {
 	public String getName() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public String getSpecialty() {
+		return "Brain";
 	}
 
 }
