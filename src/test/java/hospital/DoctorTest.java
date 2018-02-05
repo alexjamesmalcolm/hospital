@@ -79,4 +79,11 @@ public class DoctorTest {
 		String name = underTest.getName();
 		assertThat(name, is("Phil"));
 	}
+	
+	@Test
+	public void shouldHaveNameJohn() {
+		Employee underTest = new Doctor("John", 0, "");
+		String name = underTest.getName();
+		assertThat(name, is("John"));
+	}
 }

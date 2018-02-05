@@ -2,10 +2,11 @@ package hospital;
 
 public class Doctor extends Employee {
 
-	private int employeeNumber;
+	//private int employeeNumber;
 	private String specialty;
 
 	public Doctor(String name, int employeeNumber, String specialty) {
+		this.name = name;
 		this.employeeNumber = employeeNumber;
 		this.specialty = specialty;
 	}
@@ -23,10 +24,10 @@ public class Doctor extends Employee {
 		return employeeNumber;
 	}
 
-	@Override
-	public String getName() {
-		return "Phil";
-	}
+//	@Override
+//	public String getName() {
+//		return "Phil";
+//	}
 
 	public String getSpecialty() {
 		return specialty;

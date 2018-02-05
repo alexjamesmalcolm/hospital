@@ -2,9 +2,16 @@ package hospital;
 
 public abstract class Employee {
 
+	protected String name;
+	protected int employeeNumber;
+
 	public abstract int getSalary();
 
-	public abstract int getEmployeeNumber();
+	public int getEmployeeNumber() {
+		return employeeNumber;
+	}
 
-	public abstract String getName();
+	public String getName() {
+		return name;
+	};
 }
