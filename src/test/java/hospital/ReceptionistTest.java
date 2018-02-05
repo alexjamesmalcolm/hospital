@@ -16,4 +16,11 @@ public class ReceptionistTest {
 		boolean status = underTest.isOnPhone();
 		assertThat(status, is(true));
 	}
+	
+	@Test
+	public void shouldHavePhoneStatusFalse() {
+		Receptionist underTest = new Receptionist("", 1, false);
+		boolean status = underTest.isOnPhone();
+		assertThat(status, is(false));
+	}
 }
