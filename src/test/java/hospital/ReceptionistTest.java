@@ -30,4 +30,11 @@ public class ReceptionistTest {
 		String name = underTest.getName();
 		assertThat(name, is("John"));
 	}
+	
+	@Test
+	public void shouldHaveEmployeeNumber() {
+		Employee underTest = new Receptionist("",111,true);
+		int num = underTest.getEmployeeNumber();
+		assertThat(num, is(111));
+	}
 }

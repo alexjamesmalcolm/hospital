@@ -6,6 +6,7 @@ public class Receptionist extends Employee {
 
 	public Receptionist(String name, int employeeNumber, boolean isOnPhone) {
 		this.name = name;
+		this.employeeNumber = employeeNumber;
 		this.isOnPhone = isOnPhone;
 	}
 
