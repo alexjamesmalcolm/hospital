@@ -12,7 +12,7 @@ public class Janitor extends Employee {
 
 	@Override
 	public int getSalary() {
-		return 0;
+		return 40000;
 	}
 	
 	public boolean isSweeping() {

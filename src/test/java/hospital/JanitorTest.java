@@ -37,4 +37,11 @@ public class JanitorTest {
 		boolean isSweeping = underTest.isSweeping();
 		assertThat(isSweeping, is(false));
 	}
+	
+	@Test
+	public void shouldHaveSalary() {
+		Janitor underTest = new Janitor(null, 0, false);
+		int salary = underTest.getSalary();
+		assertThat(salary, is(40000));
+	}
 }
