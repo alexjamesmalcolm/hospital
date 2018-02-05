@@ -40,7 +40,7 @@ public class DoctorTest {
 
 	@Test
 	public void shouldHaveSalary() {
-		Doctor underTest = new Doctor();
+		Employee underTest = new Doctor();
 		int salary = underTest.getSalary();
 		assertThat(salary, is(90000));
 	}

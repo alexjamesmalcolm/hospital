@@ -1,6 +1,6 @@
 package hospital;
 
-public class Doctor {
+public class Doctor extends Employee {
 
 	public void drawBlood(Bleedable bleedable) {
 		bleedable.removeBlood(3);
