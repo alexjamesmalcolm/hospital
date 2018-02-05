@@ -2,8 +2,10 @@ package hospital;
 
 public class Doctor extends Employee {
 
+	private int employeeNumber;
+
 	public Doctor(int employeeNumber) {
-		// TODO Auto-generated constructor stub
+		this.employeeNumber = employeeNumber;
 	}
 
 	public void drawBlood(Bleedable bleedable) {
@@ -12,6 +14,12 @@ public class Doctor extends Employee {
 
 	public int getSalary() {
 		return 90000;
+	}
+
+	@Override
+	public int getEmployeeNumber() {
+		// TODO Auto-generated method stub
+		return employeeNumber;
 	}
 
 }

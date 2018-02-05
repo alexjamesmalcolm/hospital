@@ -9,7 +9,7 @@ public class DoctorTest {
 
 	@Test
 	public void shouldDrawBlood() {
-		Doctor underTest = new Doctor();
+		Doctor underTest = new Doctor(0);
 		Patient victim = new Patient();
 
 		int beforeBloodLevel = victim.getBloods();
@@ -31,7 +31,7 @@ public class DoctorTest {
 
 	@Test
 	public void shouldDrawBloodFromTestDouble() {
-		Doctor underTest = new Doctor();
+		Doctor underTest = new Doctor(0);
 		Bleedable patient = new BleedableDouble();
 		underTest.drawBlood(patient);
 
@@ -40,8 +40,22 @@ public class DoctorTest {
 
 	@Test
 	public void shouldHaveSalary() {
-		Employee underTest = new Doctor();
+		Employee underTest = new Doctor(0);
 		int salary = underTest.getSalary();
 		assertThat(salary, is(90000));
+	}
+
+	@Test
+	public void shouldHaveDoctorEmployeeNumberBe111() {
+		Employee underTest = new Doctor(111);
+		int number = underTest.getEmployeeNumber();
+		assertThat(number, is(111));
+	}
+
+	@Test
+	public void shouldHaveDoctorEmployeeNumberBe222() {
+		Employee underTest = new Doctor(222);
+		int number = underTest.getEmployeeNumber();
+		assertThat(number, is(222));
 	}
 }
