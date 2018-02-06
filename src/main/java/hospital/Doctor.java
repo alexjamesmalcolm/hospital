@@ -9,7 +9,7 @@ public class Doctor extends Employee implements MedicalDuties {
 		this.employeeNumber = employeeNumber;
 		this.specialty = specialty;
 	}
-	
+
 	@Override
 	public int getSalary() {
 		return 90000;

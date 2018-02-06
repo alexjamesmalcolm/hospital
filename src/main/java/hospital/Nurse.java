@@ -12,6 +12,7 @@ public class Nurse extends Employee implements MedicalDuties {
 		patient.removeBlood(3);
 	}
 
+	@Override
 	public int getSalary() {
 		return 50000;
 	}
