@@ -47,7 +47,7 @@ public class SurgeonTest {
 		boolean status = underTest.isOperating();
 		assertThat(status, is(false));
 	}
-	
+
 	@Test
 	public void shouldDrawBlood() {
 		Surgeon underTest = new Surgeon(null, 0, null, false);
